@@ -29,7 +29,6 @@ body{
 }
 
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(45deg,purple,blue,rgb(255, 255, 255),rgb(12, 12, 158));
-    border-radius: 10px;
-    height: 5px;
+    background: linear-gradient(#21D4FD,#B721FF);
+    border-radius: 500px;
 }
