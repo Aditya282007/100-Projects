@@ -21,6 +21,33 @@ body{
     left: 0;
     height: 100%;
     width: 100%;
-    background: #ccc;
+    transition: all 0.5s;
 }
 
+.clip-1{
+    background: url(https://images.pexels.com/photos/707344/pexels-photo-707344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 46% 0, 39% 100%,0 100%);
+}
+.clip-2{
+    background: url(https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(19% 0, 87% 0, 64% 100% , 33% 100%);
+
+}
+.clip-3{
+    background: url(https://images.pexels.com/photos/1276518/pexels-photo-1276518.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(82% 0, 100% 0, 100% 100% , 63% 100%);
+}
+
+.container:hover .clip{
+    clip-path: polygon(100% 0, 100% 0, 100% 100% , 100% 100%);
+}
+
+.container .clip:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100% , 0% 100%);
+}
