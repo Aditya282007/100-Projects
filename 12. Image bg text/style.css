@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #222;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.heading{
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    background: url(https://images.pexels.com/photos/2832026/pexels-photo-2832026.jpeg?auto=compress&cs=tinysrgb&w=600);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: cover;
+    color: transparent;
+}
