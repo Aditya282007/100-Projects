@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(10, 10, 10);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: white;
+}
+
+p{
+    position: relative;
+    font-size: 3rem;
+}
+
+.js{
+    color: yellow;
+}
+
+.typed-text{
+    color: red;
+}
+
+.cursor{
+    display: inline-block;
+    width: 3px;
+    background-color: red;
+    margin-left: 0.1rem;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
