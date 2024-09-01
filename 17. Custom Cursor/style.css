@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: white;
+}
+
+.container{
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 5rem;
+    font-family: "Playfair Display SC", serif;
+}
+
+p{
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 1.5rem;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+}
+
+button{
+    background: transparent;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cursor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.expand{
+    animation: cursorAnim 0.5s infinite;
+}
+
+@keyframes cursorAnim{
+    0%{
+        width: 15px;
+        height: 15px;
+    }
+    50%{
+        width: 35px;
+        height: 35px;
+    }
+    100%{
+        width: 15px;
+        height: 15px;
+    }
+}
