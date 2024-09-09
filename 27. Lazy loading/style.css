@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    overflow: hidden;
+    color: white;
+}
+
+.background{
+    background: url(https://images.pexels.com/photos/1276518/pexels-photo-1276518.jpeg?auto=compress&cs=tinysrgb&w=600) no-repeat center center/cover;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100vw + 40px);
+    height: calc(100vh + 40px);
+    z-index: -1;
+    filter: blur(0px);
+}
+
+.loading-text{
+    font-size: 5rem;
+}
