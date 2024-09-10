@@ -20,3 +20,6 @@ close.addEventListener('click',() => {
     modal.classList.remove('show-modal');
 })
 
+window.addEventListener('click', e => {
+    e.target === modal ? modal.classList.remove('show-modal') : false
+})
