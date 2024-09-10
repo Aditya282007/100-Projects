@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --modal-duration: 1s;
+}
+
+body{
+    font-family:sans-serif;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(https://images.pexels.com/photos/709689/pexels-photo-709689.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content-container h1{
+    font-size: 4rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.content-container p{
+    width: 600px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 25px;
+}
+
+.cta-btn{
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    background-color: rgb(182, 48, 0);
+    color: #000;
+    border: 3px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover{
+    transform: scale(0.95);
+    background-color: #000;
+    color:  rgb(182, 48, 0);
+    border: 3px solid rgb(182, 48, 0);
+}
+
+.modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+
+.modal{
+    background: #fff;
+    position: absolute;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);
+    overflow: hidden;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+}
+
+.modal-content{
+    padding: 20px;
+}
+
+.modal-form div{
+    margin: 20px 0;
+}
+
+.modal-form label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-form .form-input{
+    padding: 8px;
+    width: 100%;
+}
+
+.close-btn{
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.submit-btn{
+    padding: 10px 30px;
+    font-weight: bold;
+    background-color: rgb(182, 48, 0);
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover{
+    transform: scale(0.95);
+    background-color: #000;
+    color:  rgb(182, 48, 0);
+}
+
+.modal-container.show-modal{
+    display: block;
+}
