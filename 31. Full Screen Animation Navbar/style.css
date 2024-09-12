@@ -22,7 +22,7 @@ body{
     z-index: 100;
     gap: 1.5rem;
     background-color: #5c6fda;
-    /* clip-path: circle(20px at calc(100vw - 5vw) 31px); */
+    clip-path: circle(20px at calc(100vw - 5vw) 31px);
     transition: clip-path 0.5s;
 }
 
@@ -33,7 +33,7 @@ body{
 
 .menu li a{
     text-decoration: none;
-    color: #fff;
+    color: #000;
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: bold;
@@ -46,6 +46,34 @@ body{
     position: relative;
     display: block;
 }
+
+.btn{
+    position: absolute;
+    top: 20px;
+    left: calc(100vw - 5vw);
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.btn > span{
+    display: block;
+    width: 4px;
+    height: 4px;
+    border: 2px solid white;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.highlight{
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    background-color: #fff;
+    transition: transform 0.5s;
+}
+
 
 .image-container{
     height: 70vh;
