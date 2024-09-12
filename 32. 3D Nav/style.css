@@ -61,12 +61,12 @@ body{
     display: none;
 }
 
-.toggle-btn span:nth-child(1){
+.toggle-btn.active span:nth-child(1){
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
 }
 
-.toggle-btn span:nth-child(3){
+.toggle-btn.active span:nth-child(3){
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
     width: 100%;
@@ -80,3 +80,94 @@ body{
     background: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0.4));
 }
 
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    height: 100%;
+    width: 200px;
+    background-color: #212121;
+    transition: 0.2s;
+    z-index: 3;
+}
+
+.page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.page.active{
+    pointer-events: all;
+    opacity: 1;
+}
+
+.page.home{
+    background-image: url(https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjN8fHxlbnwwfHx8fHw%3D);
+}
+
+.page.about{
+    background-image: url(https://images.unsplash.com/photo-1507388412350-cb43abdebced?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fHw%3D);
+}
+
+.page.project{
+    background-image: url(https://images.unsplash.com/photo-1495584816685-4bdbf1b5057e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjJ8fHxlbnwwfHx8fHw%3D);
+}
+
+.page .title{
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+/* Javascript */
+.page-container.active{
+    left: -10px;
+    transform: rotateY(45deg) scale(0.5);
+}
+
+.nav-list{
+    position: absolute;
+    top: 40%;
+    right: 10vw;
+    opacity: 0;
+    color: #ffffff;
+}
+
+.link{
+    position: relative;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    transition: 0.5s;
+    letter-spacing: 2px;
+    list-style: none;
+}
+
+.link:hover{
+    letter-spacing: 5px;
+    text-shadow: 5px 5px 10px rgba(0,0,0,0);
+    opacity: 0.8;
+    transform: translateX(-20px);
+}
+
+.nav-list.show{
+    opacity: 1;
+}
+
+@keyframes slide{
+    100%{
+        left: 100%;
+    }
+}
